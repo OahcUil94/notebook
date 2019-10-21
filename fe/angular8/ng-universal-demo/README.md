@@ -20,6 +20,15 @@
 }
 ```
 
+之后会生成一个`main.ts`文件, 在一些IDE中, 该文件会提示错误, 无法解析`express`模块中暴露的内容, 所以还需要安装`@types/express`: 
+
+`npm i -D @types/express`
+
+后面还会用到一个模块: `TransferHttpCacheModule`, 用来实现服务器到客户端的请求传输缓存，防止客户端重复请求服务端已完成的请求, 这个模块在`@nguniversal/common`包中: 
+
+`npm i -S @nguniversal/common`
+
+
 ### 执行命令之后，都添加了哪些内容
 
 #### 项目依赖
@@ -43,3 +52,6 @@
 - server.ts 
 
 
+## 参考文章
+
+- [Angular Universal 服务端渲染](https://www.jianshu.com/p/40be228a5ec6)
