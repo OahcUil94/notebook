@@ -1,27 +1,22 @@
-# NgUniversalDemo
+# angular同构项目
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
+## 新建项目
 
-## Development server
+`ng new ng-universal-demo --routing -g -S --skip-install --style=scss -v`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 添加同构相关的代码
 
-## Code scaffolding
+`ng add @nguniversal/express-engine --clientProject project_name`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> 注意: `--clientProject`参数指定的名字必须要和`angular.json`中`projects`这个配置项下的名字一致, 例如：
 
-## Build
+```json
+{
+  ...
+  "projects": {
+    "ng-universal-demo": ...
+  }
+  ...
+}
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
