@@ -49,8 +49,22 @@
 - tsconfig.server.json
 - src/main.server.ts
 - src/app/app.server.module.ts
-- server.ts 
+- server.ts
 
+## 服务端的模块懒加载
+
+只需要在`app.server.module.ts`文件中导入`ModuleMapLoaderModule`模块即可
+
+## 服务端到客户端的状态传输
+
+- `app.server.module.ts`中导入`ServerTransferStateModule`模块
+- `app.module.ts`中导入`BrowserTransferStateModule`模块和`TransferHttpCacheModule`模块
+
+这三个模块都与服务端到客户端的状态传输有关: 
+
+- ServerTransferStateModule: 在服务端导入，用于实现将状态从服务端传输到客户端
+- BrowserTransferStateModule: 在客户端导入，用于实现将状态从服务端传输到客户端
+- TransferHttpCacheModule: 用于实现服务端到客户端的请求传输缓存，防止客户端重复请求服务端已完成的请求
 
 ## 参考文章
 
