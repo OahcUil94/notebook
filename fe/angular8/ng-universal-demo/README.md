@@ -20,3 +20,26 @@
 }
 ```
 
+### 执行命令之后，都添加了哪些内容
+
+#### 项目依赖
+
+- dependencies
+  - @angular/platform-server: Universal的服务端元件
+  - @nguniversal/express-engine: Universal应用的Express引擎
+  - @nguniversal/module-map-ngfactory-loader: 用于处理服务端渲染环境下的惰性加载
+  - express: Node Express 服务器
+- devDependencies
+  - ts-loader
+  - typescript
+  - webpack-cli
+
+#### 新增项目文件
+
+- webpack.server.config.js
+- tsconfig.server.json
+- src/main.server.ts
+- src/app/app.server.module.ts
+- server.ts 
+
+
