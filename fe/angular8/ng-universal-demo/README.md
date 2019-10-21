@@ -66,6 +66,11 @@
 - BrowserTransferStateModule: 在客户端导入，用于实现将状态从服务端传输到客户端
 - TransferHttpCacheModule: 用于实现服务端到客户端的请求传输缓存，防止客户端重复请求服务端已完成的请求
 
+## 总结
+
+- 所有的内容是在node层渲染好的
+- 懒加载的路由, 包括初始的http请求都是在node层渲染好的
+
 ## 参考文章
 
 - [Angular Universal 服务端渲染](https://www.jianshu.com/p/40be228a5ec6)

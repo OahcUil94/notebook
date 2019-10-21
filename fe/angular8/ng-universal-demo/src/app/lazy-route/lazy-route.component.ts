@@ -8,12 +8,12 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./lazy-route.component.scss']
 })
 export class LazyRouteComponent implements OnInit {
-  data: any = {};
+  data: any = '';
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.poiSearch('餐饮', '北京市').subscribe((data: any) => {
-      this.data = data;
+      this.data = JSON.stringify(data);
     });
   }
 
