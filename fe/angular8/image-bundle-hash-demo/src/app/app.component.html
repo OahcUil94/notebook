@@ -1,0 +1,35 @@
+<h1>图片打包hash测试</h1>
+
+<h2>img标签的src属性直接写地址01.png</h2>
+<h3>不带hash</h3>
+<div>
+    <img src="../assets/01.png" alt="">
+</div>
+
+<h2>img标签的src属性写require地址02.png(require是导入模块, require不可以在html模板中使用)</h2>
+<h3>忽略</h3>
+<div>
+    <!--<img [src]="require('../assets/02.png')" alt="">-->
+</div>
+
+<h2>img标签的src属性通过js字符串设置03.png</h2>
+<h3>不带hash</h3>
+<div>
+    <img [src]="img03" alt="">
+</div>
+
+<h2>img标签的src属性通过js的require地址设置04.png</h2>
+<h3>带hash</h3>
+<div>
+    <img [src]="img04" alt="">
+</div>
+
+<h2>div背景图片写在scss里05.png</h2>
+<h3>带hash</h3>
+<div class="bg01"></div>
+
+<h2>div背景图片写在内联样式里06.png</h2>
+<div style="height: 200px;background: url('../assets/06.png') no-repeat"></div>
+
+<h2>div背景图片通过js写在内联样式里07.png</h2>
+<div [ngStyle]="{'background-image':img07}" style="height:200px;background-repeat: no-repeat"></div>
