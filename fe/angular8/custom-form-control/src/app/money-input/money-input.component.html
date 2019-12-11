@@ -1,0 +1,12 @@
+转换金额：
+
+<div>
+    <form [formGroup]="moneyForm">
+        <input type="text" formControlName="money" appMoneyInput #element>
+
+        <button type="button" (click)="handleClick()">点击更新</button>
+        <button type="button" (click)="handleClick2()">点击更新2</button>
+        <button type="button" (click)="handleClick3()">禁用</button>
+        <button type="button" (click)="handleClick4()">开启</button>
+    </form>
+</div>
