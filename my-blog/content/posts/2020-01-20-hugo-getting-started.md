@@ -47,3 +47,19 @@ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/anan
 启动服务：`hugo server -D`
 
 打包静态资源：`hugo -D`
+
+> 注意：在克隆github上的项目时，可能会由于网络原因，下载速度缓慢，可以通过配置代理来进行设置
+
+设置只在访问github的时候进行代理：
+
+```
+git config --global http.https://github.com.proxy http://127.0.0.1:1087
+git config --global https.https://github.com.proxy https://127.0.0.1:1087
+```
+
+设置访问所有平台都进行代理：
+
+```
+git config --global http.proxy http://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:1080
+```
