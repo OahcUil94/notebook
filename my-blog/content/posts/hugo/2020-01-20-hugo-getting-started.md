@@ -63,3 +63,14 @@ git config --global https.https://github.com.proxy https://127.0.0.1:1087
 git config --global http.proxy http://127.0.0.1:1080
 git config --global https.proxy https://127.0.0.1:1080
 ```
+
+## 引入图片处理
+
+1. 把图片资源加入到static文件夹下
+2. 使用shortcodes特性来设置图片相关的参数，参考这篇文章：https://gohugo.io/content-management/shortcodes/
+
+例如：
+
+```html
+\{\{\< figure src="/a.jpg" width="100" height="200"\>\}\}
+```
